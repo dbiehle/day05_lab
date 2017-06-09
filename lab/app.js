@@ -11,7 +11,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function sum(a, b){ //eslint-disable-line
   var sumVar = a + b;
-  return sumArray = [sumVar, 'The sum of ' + a + ' and ' + b + ' is ' + sumVar + '.'];
+  return [sumVar, 'The sum of ' + a + ' and ' + b + ' is ' + sumVar + '.'];
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -30,7 +30,7 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiply(a,b){ //eslint-disable-line
   var multiplyVar = a * b;
-  return multiplyArray = [multiplyVar, 'The product of ' + a + ' and ' + b + ' is ' + multiplyVar + '.'];
+  return [multiplyVar, 'The product of ' + a + ' and ' + b + ' is ' + multiplyVar + '.'];
 }
 
 // Here is the test for multiply(); uncomment it to run it
@@ -75,12 +75,13 @@ Test this function by hand in the console to get it working, and when you think 
 var testArray = [2,3,4]; //eslint-disable-line
 
 function sumArray(testArray){ //eslint-disable-line
-
+  var thisVar = sum(sum(testArray[0],testArray[1])[0],testArray[2])[0];
+  return [thisVar, testArray + ' was passed in as an array of numbers, and ' + thisVar + ' is their sum.'];
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray(testArray);
+testSumArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
